@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us — Acme Co.</title>
+  <meta name="description" content="About Acme Co. — our mission, values, team and contact." />
+  <link rel="stylesheet" href="about.css">
+</head>
+<body>
+  <main class="container" role="main">
+    <header class="hero" aria-labelledby="about-title">
+      <section class="intro">
+        <span class="eyebrow">About Us</span>
+        <h1 id="about-title">We build delightful products that people love</h1>
+        <p class="lead">Acme Co. crafts thoughtful web products for small teams and startups. We care deeply about performance, design and building things that last.</p>
+
+        <div class="values" aria-label="Our values">
+          <div class="value"><h4>Human-first</h4><p>We design for real people, not metrics.</p></div>
+          <div class="value"><h4>Practical craft</h4><p>Ship often, learn fast, improve iteratively.</p></div>
+          <div class="value"><h4>Long-term</h4><p>Sustainable choices over quick wins.</p></div>
+        </div>
+
+        <div class="stats" aria-hidden="false">
+          <div class="stat"><b>2019</b><small>Founded</small></div>
+          <div class="stat"><b>35+</b><small>Team members</small></div>
+          <div class="stat"><b>120+</b><small>Projects shipped</small></div>
+        </div>
+      </section>
+
+      <aside aria-label="Quick facts" class="card" style="padding:18px">
+        <p style="margin:0 0 10px 0"><span class="chip">Remote-first</span></p>
+        <h3 style="margin:0 0 8px 0">Quick facts</h3>
+        <p style="margin:0 0 10px 0; color:var(--muted)">Offices in Berlin &amp; Bangalore. Focused on UX, performance and maintainable code.</p>
+        <a href="#contact" class="chip" style="text-decoration:none; color:inherit">Get in touch →</a>
+      </aside>
+    </header>
+
+    <section class="team" aria-labelledby="team-heading">
+      <h2 id="team-heading">Meet the team</h2>
+      <div class="team-grid">
+        <!-- Example team cards. Replace images / avatars as needed -->
+        <div class="card">
+          <div style="display:flex; gap:12px; align-items:center">
+            <div class="avatar">JK</div>
+            <div>
+              <p class="member-name">Mr janak kumar</p>
+              <p class="member-role">Co-founder &amp; CEO</p>
+            </div>
+          </div>
+          <p class="member-bio">Product leader focused on building inclusive teams and beautiful product experiences.</p>
+        </div>
+
+        <div class="card">
+          <div style="display:flex; gap:12px; align-items:center">
+            <div class="avatar">SK</div>
+            <div>
+              <p class="member-name">Mr suraj kumar</p>
+              <p class="member-role">Head of Engineering</p>
+            </div>
+          </div>
+          <p class="member-bio">Backend &amp; architecture nerd. Loves clean APIs and low-latency systems.</p>
+        </div>
+
+        <div class="card">
+          <div style="display:flex; gap:12px; align-items:center">
+            <div class="avatar">AK</div>
+            <div>
+              <p class="member-name">Mr Ak singh</p>
+              <p class="member-role">Design Lead</p>
+            </div>
+          </div>
+          <p class="member-bio">Design system advocate with a soft spot for micro-interactions and motion.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-heading">
+      <div>
+        <h2 id="contact-heading">Say hello</h2>
+        <p style="color:var(--muted)">Interested in working together or have a question? Drop us a message — we usually reply within a few business days.</p>
+
+        <p style="margin-top:18px"><strong>Location</strong><br><span style="color:var(--muted)">Berlin, Germany — Bangalore, India</span></p>
+        <p><strong>Email</strong><br><span style="color:var(--muted)">hello@acme.example</span></p>
+      </div>
+
+      <form class="contact-form" onsubmit="event.preventDefault(); alert('Thanks — message captured (this is a demo).');" aria-label="Contact form">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" placeholder="Your name" required />
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@company.com" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Tell us about your project" required></textarea>
+
+        <button class="btn" type="submit">Send message</button>
+      </form>
+    </section>
+
+    <footer>
+      <small>© <span id="year"></span> Acme Co. — Crafted with care.</small>
+    </footer>
+  </main>
+
+  <script>
+    // small nicety: current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
