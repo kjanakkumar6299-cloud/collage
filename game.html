@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Games • Project Board</title>
+
+<style>
+  :root {
+    --bg-1: #0b1220;
+    --bg-2: #0e1627;
+    --glass: rgba(255,255,255,0.05);
+    --text: #eaf1ff;
+    --muted: #96a1b3;
+    --accent-1: #7c3aed;
+    --accent-2: #06b6d4;
+    --card-bg: rgba(255,255,255,0.03);
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, Arial;
+    background: linear-gradient(180deg, var(--bg-1), var(--bg-2));
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Topbar */
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 22px;
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.02);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .logo {
+    width: 44px;
+    height: 44px;
+    background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    box-shadow: 0 8px 24px rgba(124,58,237,0.4);
+  }
+
+  nav a {
+    text-decoration: none;
+    color: var(--muted);
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: 600;
+  }
+
+  nav a:hover {
+    background: var(--glass);
+    color: white;
+  }
+
+  nav a.active {
+    background: var(--glass);
+    color: white;
+  }
+
+  /* Container */
+  .container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 18px;
+  }
+
+  .heading h2 {
+    font-size: 24px;
+    margin-bottom: 6px;
+  }
+
+  .heading small {
+    color: var(--muted);
+  }
+
+  /* Card */
+  .card {
+    padding: 20px;
+    background: var(--card-bg);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  }
+
+  /* Games Grid */
+  .games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+  }
+
+  .game {
+    padding: 18px;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    text-decoration: none;
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 140px;
+    position: relative;
+    transition: transform .2s, box-shadow .2s;
+    backdrop-filter: blur(6px);
+  }
+
+  .game:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 35px rgba(0,0,0,0.38);
+  }
+
+  .title {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .desc {
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 4px;
+  }
+
+  .tag {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    padding: 6px 10px;
+    font-size: 12px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    color: var(--text);
+  }
+
+  /* Game Colors */
+  .g1 { background: linear-gradient(135deg,#7c3aed33,#06b6d433); }
+  .g2 { background: linear-gradient(135deg,#ef444433,#f59e0b33); }
+  .g3 { background: linear-gradient(135deg,#06b6d433,#10b98133); }
+  .g4 { background: linear-gradient(135deg,#db277733,#7c3aed33); }
+  .g5 { background: linear-gradient(135deg,#2563eb33,#06b6d433); }
+  .g6 { background: linear-gradient(135deg,#f9731633,#ec489933); }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+  <div class="brand">
+    <div class="logo">
+      <img src="janak67.jpeg" alt="Logo" style="width:100%; height:100%; border-radius:12px; object-fit:cover;">
+    </div>
+    
+    <div>
+      <h3 style="margin:0;">Project Board</h3>
+      <small>Games</small>
+    </div>
+  </div>
+
+  <nav>
+    <a href="/">Home</a>
+    <a href="/projects.html">Projects</a>
+    <a class="active" href="/games.html">Games</a>
+    <a href="/about.html">About</a>
+  </nav>
+</div>
+
+<div class="container">
+
+  <div class="heading">
+    <h2>All Games</h2>
+    <small>Game 1: Tic-Tac-Toe (Hard AI)</small>
+  </div>
+
+  <div class="card">
+    <div class="games-grid">
+
+      <a class="game g1" href="game1.html">
+        <span>
+          <div class="title">Game 1 — Tic-Tac-Toe</div>
+          <div class="desc">Hard Mode AI • Unbeatable • 3×3 Grid</div>
+        </span>
+        <div class="tag">Single Player</div>
+      </a>
+
+      <a class="game g2" href="game2.html">
+        <span>
+          <div class="title">Game 2 — Coming Soon</div>
+          <div class="desc">Add your own game here</div>
+        </span>
+        <div class="tag">Beta</div>
+      </a>
+
+      <a class="game g3" href="game3.html">
+        <span>
+          <div class="title">Game 3 — Coming Soon</div>
+          <div class="desc">Future mini-games</div>
+        </span>
+        <div class="tag">Mini</div>
+      </a>
+
+      <a class="game g4" href="game4.html">
+        <span>
+          <div class="title">Game 4 — Coming Soon</div>
+          <div class="desc">Custom slot</div>
+        </span>
+        <div class="tag">Custom</div>
+      </a>
+
+      <a class="game g5" href="game5.html">
+        <span>
+          <div class="title">Game 5 — Coming Soon</div>
+          <div class="desc">Future game</div>
+        </span>
+        <div class="tag">Future</div>
+      </a>
+
+      <a class="game g6" href="game6.html">
+        <span>
+          <div class="title">Game 6 — Coming Soon</div>
+          <div class="desc">Future game</div>
+        </span>
+        <div class="tag">Future</div>
+      </a>
+
+    </div>
+
+    <div class="footer">Tip: Game 1 खेलने के लिए game1.html खोलें।</div>
+  </div>
+
+</div>
+
+</body>
+</html>
